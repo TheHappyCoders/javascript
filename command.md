@@ -45,4 +45,15 @@
 * 查看软件安装位置 `which 软件名`
 * 查看软件安装的文件 `whereis  包名`
 
+### chrome打开控制台
+* mac打开chrome控制台 `option＋command＋i`
+* window打开chrome控制台 `f12`
+
+### windows Mac 键盘对应
+* commend变成Win(田字) 
+* option变成alt(苹果键盘上也有写）
+
+### mac 系统快捷键
+* 强制关闭程序(某个程序卡死) `option ＋command＋esc`
+
 
