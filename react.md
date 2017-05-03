@@ -4,7 +4,6 @@
 * 方法1. you need to edit node_modules/react-native/packager/defaults.js and add your project name to providesNodeModules, like this: exports.providesModuleNodeModules = [ 'react-native', 'react-native-windows', 'react-native-menu', ];
 * 方法2. 启动方式  react-native start  --providesModuleNodeModules react-native,{any_node_module}
 
-
 ### bundle 打包
 #### android
 * $ `mkdir -p android/app/src/main/assets`
