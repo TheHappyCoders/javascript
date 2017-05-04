@@ -18,3 +18,6 @@
 * http://blog.sina.com.cn/s/blog_71fcb0970102wqdr.html
 * http://15.idea.lanyus.com/
 * http://idea.qinxi1992.cn/
+
+### favorites中的文件夹一直loading，打不开
+* 左边文件导航栏右键选择打不开的文件夹 mark directory as, 选择sources root
