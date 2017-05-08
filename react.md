@@ -12,7 +12,7 @@
 * $ `mkdir -p ios/app/src/main/assets`
 * $ `react-native bundle --platform ios --dev true --entry-file index.ios.js   --bundle-output ios/app/src/main/assets/main.jsbundle  --assets-dest  ios/app/src/main/res/`
 
-### bug：【Duplicate module name: Text】
+### bug：【declaration with the same name across two different files】
 This warning is caused by a @providesModule declaration with the same name across two different files.
 Failed to build DependencyGraph: @providesModule naming collision:
 Duplicate module name: Text
