@@ -27,5 +27,7 @@ Duplicate module name: Text
  * @providesModule Text
  * @flow
 
+### [bug:Android studio - Failed to complete gradle execution - error in opening zip file](http://stackoverflow.com/questions/23828085/android-studio-failed-to-complete-gradle-execution-error-in-opening-zip-file)
+* 解决方法: delete the .gradle directories in both your home directory and in your project's root directory and try building again.
 
 
