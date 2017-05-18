@@ -38,7 +38,8 @@
 
 #### 撤回代码
 * 语法 git reset －－[mixed默认|hard|soft] commit号|HEAD~n
-* mixed－>add之前 hard－>add之前文件也还原 soft－>commit之前，保留add
+* hard－>add之前文件也还原(回到1) mixed－>add之前(回到2) soft－>commit之前，保留add(回到3)
+* <--1-modify--2--add--3--commit--4-- 
 
 ### Mac find、 which 、whereis命令
 * 查找文件 http://www.macx.cn/thread-2070979-1-1.html
