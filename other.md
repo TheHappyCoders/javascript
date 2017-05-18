@@ -3,12 +3,6 @@
 1. 查看端口PID linux: netstat -nlp查看开启的服务信息；mac: lsof -i :8880
 2. kill -9 PID号
 
-### linux node 二进制包安装
-1. 下载二进制
-2. 解压缩
-3. 将目录加入`~/.bash_profile`
-4. 重启系统或者执行`source ~/.bash_profile`
-
 ### ssh命令
 * 上传：`scp /path/file（这部分为本地的路径） user（远端目标用户名）@host（远端目标IP):/pathorfile（文件存储路径）`（文件夹先压缩）
 * 下载：`scp user（远端用户名）@host（远端IP):/path/file（下载文件在远端的路径） localpathorfile（本地文件存放路径）`
