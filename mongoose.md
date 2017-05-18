@@ -15,8 +15,12 @@ logpath=log/mongod.log
 logappend = true
 fork=true
 </pre>
-4. 启动 `sudo mongod [--config|-f]  file/to/path/mongod.conf`
-5. mongo终端连接数据库 
+
+### 启动
+`sudo mongod [--config|-f]  file/to/path/mongod.conf`
+
+### 连接
+#### mongo终端连接数据库 
 <pre>
 a.mongo ip:port
 b.use admin; 
@@ -24,7 +28,11 @@ c.db.auth("user",pwd)
 d.use xxdb
 e.其它操作
 </pre>
-6.nodejs mongoose连接数据库 `mongoose.connect("mongodb://user:pwd@ip:port/db");`
+#### nodejs mongoose连接数据库 
+`mongoose.connect("mongodb://user:pwd@ip:port/db");`
+
+### 关闭
+mongo终端连接、c步骤后执行 `db.shutdownServer()`
 
 ### 导出数据
 <pre>
