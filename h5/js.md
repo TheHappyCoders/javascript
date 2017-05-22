@@ -49,3 +49,5 @@ const obj = {
 * New string methods
 * New Array methods 
 * From CommonJS modules to ES6 modules
+### 语言进化
+* module and class default is use strict 类和模块隐式为严格模式;
