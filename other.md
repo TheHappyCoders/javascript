@@ -77,4 +77,5 @@ end
 ================
 9.pod install
 10.Open App.xcworkspace and build
+可以安装cocoapod app
 </pre>
