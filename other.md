@@ -64,4 +64,16 @@ ERROR:  While executing gem ... (Errno::EPERM)
 原因：在stackoverflow搜到的解释是这样的，This is happening because 
 Apple has enabled rootless on the new install，也就是说在10.11系统上苹果已经启用无根的安装。)
 6.pod --version //查看是否安装成功
+7.edit Podfile 配置文件
+=================
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, ‘8.0’
+target ‘myshenyang’ do
+pod 'BaiduMapKit'
+pod 'AFNetworking', '~> 3.1’
+pod 'UMengAnalytics'
+end
+================
+8.pod install
+9.Open App.xcworkspace and build
 </pre>
