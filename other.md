@@ -77,5 +77,6 @@ end
 ================
 9.pod install
 10.Open App.xcworkspace and build
-可以安装cocoapod app
+warning：还是报类似[!] Unable to find a specification for `BaiduMapKit` 错误，
+可以安装cocoapod app代替 不用命令行工具
 </pre>
