@@ -51,7 +51,7 @@
 ### mac 系统快捷键
 * 强制关闭程序(某个程序卡死) `option ＋command＋esc`
 
-### ios工具pod 安装(相当于js的npm)
+### ios工具pod 安装、使用(相当于js的npm)
 <pre>
 1.gem sources --remove https://rubygems.org/      //去掉ruby软件源
 2.gem sources -a https://ruby.taobao.org/    //添加淘宝的源  (谢谢提醒修改。)
