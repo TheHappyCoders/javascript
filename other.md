@@ -51,4 +51,17 @@
 ### mac 系统快捷键
 * 强制关闭程序(某个程序卡死) `option ＋command＋esc`
 
-
+### ios工具pod 安装(相当于js的npm)
+<pre>
+1.gem sources --remove https://rubygems.org/      //去掉ruby软件源
+2.gem sources -a https://ruby.taobao.org/    //添加淘宝的源  (谢谢提醒修改。)
+3.gem sources -l     //查看ruby软件源
+4.sudo gem update --system //
+5.sudo gem install -n /usr/local/bin cocoapods
+(如果使用‘sudo gem install cocoapods’，报错：
+ERROR:  While executing gem ... (Errno::EPERM)
+        Operation not permitted - /usr/bin/xcodeproj
+原因：在stackoverflow搜到的解释是这样的，This is happening because Apple has enabled rootless on the new install，
+也就是说在10.11系统上苹果已经启用无根的安装。)
+6.pod --version //查看是否安装成功
+</pre>
