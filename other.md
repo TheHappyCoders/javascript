@@ -61,7 +61,7 @@
 (如果使用‘sudo gem install cocoapods’，报错：
 ERROR:  While executing gem ... (Errno::EPERM)
         Operation not permitted - /usr/bin/xcodeproj
-原因：在stackoverflow搜到的解释是这样的，This is happening because Apple has enabled rootless on the new install，
-也就是说在10.11系统上苹果已经启用无根的安装。)
+原因：在stackoverflow搜到的解释是这样的，This is happening because 
+Apple has enabled rootless on the new install，也就是说在10.11系统上苹果已经启用无根的安装。)
 6.pod --version //查看是否安装成功
 </pre>
