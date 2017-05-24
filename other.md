@@ -77,6 +77,11 @@ end
 ================
 9.pod install
 10.Open App.xcworkspace and build
-warning：还是报类似[!] Unable to find a specification for `BaiduMapKit` 错误，
-可以安装cocoapod app代替 不用命令行工具
+warning：苹果系统需要升级，否则会报错
 </pre>
+
+### 查看文件夹大小
+进入某个文件夹执行 du -sh *
+
+### 查看某个文件是否有不合法字符
+cat -e 文件名
