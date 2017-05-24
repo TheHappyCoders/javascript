@@ -77,7 +77,6 @@ end
 ================
 9.pod install
 10.Open App.xcworkspace and build
-warning：苹果系统需要升级，否则会报错
 </pre>
 
 ### 查看文件夹大小
