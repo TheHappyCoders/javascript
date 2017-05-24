@@ -84,3 +84,79 @@ end
 
 ### 查看某个文件是否有不合法字符
 cat -e 文件名
+
+### app打包
+#### android打包apk
+* 修改配置文件android/app/src/main/assets/config.properties
+<pre>
+#######正式测试环境
+#isDebug=true
+isDebug=false
+
+######日志输出控件
+isLog=false
+#isLog=true
+
+######接口地址zz
+#url=https://xxx
+#url=http://xxx
+url=http://xxx
+
+######文件保存路径
+fileCatalog=filename
+
+######react更新配制文件的接口地址
+#reactUpdateUrl = http://xxx
+#正式
+reactUpdateUrl = https://xxx
+#lizhi
+#reactUpdateUrl = http://xxx
+
+######react更新zip下载地址的前
+#reactZipDownloadUrl = http://xxx
+#正式
+reactZipDownloadUrl = https://xxx
+#lizhi
+#reactZipDownloadUrl = http://xxx
+
+######react跳转到下一个界面的名字
+reactNextActivityName = com.xxx.MainActivity
+</pre>
+* 修改bundle入口模块名android/app/src/main/java/com/appname/MainActivity.java
+<pre>
+package com.rn_demo;
+import com.facebook.react.ReactActivity;
+public class MainActivity extends ReactActivity {
+    /**
+     * Returns the name of the main component registered from JavaScript.
+     * This is used to schedule rendering of the component.
+     */
+    @Override
+    protected String getMainComponentName() {
+        return "SimpleApp";
+    }
+}
+</pre>
+* 修改build.gradle 的versionCode和versionName android/app/build.gradle
+<pre>
+defaultConfig {
+   applicationId "com.appname"
+   minSdkVersion 16
+   targetSdkVersion 23
+   versionCode 123
+   versionName "3.1.1.15"
+   ndk {
+       abiFilters "armeabi-v7a", "x86"
+   }
+   // 默认的渠道
+   manifestPlaceholders = [UMENG_CHANNEL_VALUE: "appname"]
+}
+</pre>
+* 用gradle打包生成apk 
+</pre>
+$ cd android && ./gradlew assembleRelease 
+会根据build.gradle的productFlavors配置生成所有平台apk
+$ cd android && ./gradlew assemble[PlatformName]Release
+会生成特定平台apk，如assembleXiaomiRelease
+</pre>
+
