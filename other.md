@@ -86,7 +86,7 @@ end
 cat -e 文件名
 
 ### app打包
-#### android打包apk
+#### android使用gradle打包apk
 * 修改配置文件android/app/src/main/assets/config.properties
 <pre>
 #######正式测试环境
@@ -153,7 +153,7 @@ defaultConfig {
 }
 </pre>
 * 用gradle打包生成apk 
-</pre>
+<pre>
 $ cd android && ./gradlew assembleRelease 
 会根据build.gradle的productFlavors配置生成所有平台apk
 $ cd android && ./gradlew assemble[PlatformName]Release
