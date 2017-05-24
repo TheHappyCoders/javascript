@@ -159,4 +159,5 @@ $ cd android && ./gradlew assembleRelease
 $ cd android && ./gradlew assemble[PlatformName]Release
 会生成特定平台apk，如assembleXiaomiRelease
 </pre>
+* 在android/app/build/outputs下找到对应的apk
 
