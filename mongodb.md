@@ -43,3 +43,10 @@ landchendeMacBook-Air:conf land$ bin/mongoexport -u root -p xxxabcd  
 -f item_id,user_id,title,price,quantity --csv -o 输出CSV文件名
 说明：-f 参数指定字段列表，即CSV表头。
 </pre>
+
+### mongoose and mongodb shell 增删改查方法对应
+场景|insert|delete|update|find
+-|-|-|-|-
+shell|insertOne,insertMany|deleteOne,deleteMany|updateOne,updateMany,replaceOne|findOne,find
+mongoose|insertMany|同上|同上|同上
+
