@@ -47,6 +47,6 @@ landchendeMacBook-Air:conf land$ bin/mongoexport -u root -p xxxabcd  
 ### mongoose and mongodb shell 增删改查方法对应
 场景|insert|delete|update|find
 -|-|-|-|-
-shell|insertOne,insertMany|deleteOne,deleteMany|updateOne,updateMany,replaceOne|findOne,find
+shell|insert[One,Many]|delete[One,Many]|update[One,Many],replaceOne|findOne,find
 mongoose|insertMany|同上|同上|同上
 
