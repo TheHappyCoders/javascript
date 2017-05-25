@@ -48,6 +48,7 @@ landchendeMacBook-Air:conf land$ bin/mongoexport -u root -p xxxabcd  
 * 每个都有one many
 * 查找find代表findMany
 * mongoose 插入没有one
+
 场景|insert|delete|update|find
 -|-|-|-|-
 shell|insert[One,Many]|delete[One,Many]|update[One,Many],replaceOne|findOne,find
