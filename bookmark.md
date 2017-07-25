@@ -4,7 +4,8 @@
 [nodejs中文文档](http://nodejs.cn/api/)   
 [npm文档](https://docs.npmjs.com/getting-started/updating-local-packages)       
 [webpack中文文档](https://doc.webpack-china.org/configuration/)    
-[mozilla文档](https://developer.mozilla.org/zh-CN/)
+[mozilla文档](https://developer.mozilla.org/zh-CN/)         
+[react 中文文档](https://discountry.github.io/react/docs/hello-world.html)
 ### 文章
 [跨域请求](http://www.ruanyifeng.com/blog/2016/04/cors.html)            
 [chrome调试工具使用](https://www.zhihu.com/question/20302397?nr=1&noti_id=20087185)         
