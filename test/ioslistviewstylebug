@@ -1,0 +1,153 @@
+import React, {Component} from 'react';
+//import UIListView from '../UIListView';
+import IntroTitle from '../../title/IntroTitle';
+import {
+    View,
+    Text,
+    Image,
+    StyleSheet,
+    Dimensions,
+    Platform,
+    ListView
+} from 'react-native';
+
+const icon1 = require("./icon_form_receive.png");
+const icon2 = require("./icon_form_starttask.png");
+const icon3 = require("./icon_form_detail.png");
+const icon4 = require("./icon_form_check.png");
+const icon5 = require("./icon_form_collectmoney.png");
+
+const StepStatic = [
+    {image: icon1, titles: '领取任务', contents: '11111'},
+    {image: icon2, titles: '开始任务', contents: 'eeee'},
+    {image: icon3, titles: '填写信息', contents: 'bbbb！'},
+    {image: icon4, titles: '提交任务，等待审核', contents: 'cccccc'},
+    {image: icon5, titles: '审核通过，领取赏金', contents: 'cddddd', noBorder: true}
+];
+
+
+export default class TaskStep extends Component {
+
+    render() {
+        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        return (
+            <View style={{marginTop:10,paddingTop:10,backgroundColor: "#fff"}}>
+                <IntroTitle text="操作步骤"/>
+                {/*
+                ///////////ios web listview  bug ,this commponent height is 0
+                <ListView style={[styles.stepList,{borderWidth:1}]}
+                          dataSource={ds.cloneWithRows(StepStatic)} renderRow={this._renderRow}/> 
+               */}
+                {
+                /////////////can show normal
+                    StepStatic.map((row)=>{
+                        return this._renderRow(row);
+                    })
+                }
+            </View>
+
+        )
+    }
+
+    _renderRow(rowData) {
+        return <StepLi item={rowData}/>
+    };
+}
+
+
+class StepLi extends Component {
+    render() {
+        var stylestr = this.props.item.noBorder ? [styles.stepItem, styles.noBorderLeft] : [styles.stepItem];
+
+        return (
+            <View style={[styles.wraper]}>
+                <View style={styles.waperStep}>
+                    <View style={stylestr}>
+                        <View style={styles.stepFlex}>
+                            <Text style={[styles.stepTitle, styles.commonFontSize]}>{this.props.item.titles}</Text>
+                            <Text style={styles.stepContent}>{this.props.item.contents}</Text>
+                        </View>
+                    </View>
+                    <Image style={styles.stepImage} source={ this.props.item.image}/>
+                </View>
+            </View>
+
+        )
+    }
+};
+
+
+var styles = StyleSheet.create({
+    stepList: {
+        marginLeft: 0,
+        marginTop: 10,
+
+    },
+    stepItem: {
+        marginLeft: 12,
+        paddingLeft: 20,
+        borderLeftColor: '#ccc',
+        borderLeftWidth: 2,
+        flexDirection: 'row',
+        paddingBottom: 5,
+        //backgroundColor: 'rgba(255,255,255,0)',
+    },
+    noBorderLeft: {
+        borderLeftWidth: 0,
+    },
+    wraper: {
+        paddingLeft: 15,
+        paddingRight: 15,
+        //borderWidth:1
+        backgroundColor: '#fff',
+    },
+    waperStep: {
+        //position: 'relative',
+
+    },
+    stepFlex: {
+        //flex: 1,
+        paddingTop: 1,
+        height: 50,
+        paddingBottom: 10,
+        flexDirection: 'column',
+    },
+    stepTitle: {
+        paddingLeft: 10,
+        lineHeight: Platform.OS === 'ios' ? 18 : 25,
+        color: '#333',
+        //backgroundColor: 'rgba(255,255,255,0)',
+    },
+    commonFontSize: {
+        fontSize: Dimensions.get('window').width == 320 ? 14 : 15,
+    },
+    stepContent: {
+        paddingLeft: 10,
+        fontSize: 13,
+        lineHeight: 20,
+        color: '#999',
+        //backgroundColor: 'rgba(255,255,255,0)',
+    },
+    stepImage: {
+        top: -0.5,
+        position: 'absolute',
+        left: 0,
+        width: 24,
+        height: 24,
+        resizeMode: Image.resizeMode.stretch,
+        //backgroundColor: 'rgba(255,255,255,0)',
+    },
+});
+
+
+////////////TaskStep use in blow///////////
+<View style={{flex: 1, backgroundColor: '#f1f1f1'}}>
+    <ScrollView style={{flex: 1}}>
+        <TaskInfoPanel dataSource={this.props.taskDetail} onPress={this.goPreview.bind(this)}/>
+        <TaskDetail dataSource={this.props.taskDetail.taskDetailsInfos}/>
+        <TaskStep/>
+        <Text style={styles.tipText}>
+            温馨提示：如在操作过程中遇到任何问题，可以直接在“我的-意见反馈”中提交您的问题或宝贵意见，我们将第一时间跟您联系！
+        </Text>
+    </ScrollView>
+</View>
