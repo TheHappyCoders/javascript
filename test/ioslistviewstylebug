@@ -140,7 +140,7 @@ var styles = StyleSheet.create({
 });
 
 
-////////////TaskStep use in blow///////////
+////////////TaskStep use in below///////////
 <View style={{flex: 1, backgroundColor: '#f1f1f1'}}>
     <ScrollView style={{flex: 1}}>
         <TaskInfoPanel dataSource={this.props.taskDetail} onPress={this.goPreview.bind(this)}/>
