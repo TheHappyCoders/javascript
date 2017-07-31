@@ -53,8 +53,7 @@ const obj = {
 
 ### 语言进化
 * module and class default is use strict 类和模块隐式为严格模式;
-* module and class default is use strict 类和模块隐式为严格模式;可以
-* module and class default is use strict 类和模块隐式为严格模式;
+
 
 ### break continue
 1. 都可以用于循环
