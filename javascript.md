@@ -159,7 +159,7 @@ Object.prototype.toString()
 ### 修改原始值的方法
 修改原始值的方法|函数返回值
 -|-
-函数|-
+函数(9个)|-
 Array.prototype.copyWithin|修改后数组
 Array.prototype.fill|修改后数组
 Array.prototype.pop|删除的数组
