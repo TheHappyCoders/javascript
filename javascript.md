@@ -155,4 +155,4 @@ Object.prototype.toString()
 * for of才能识别32bit字符，正确分割码点 `var s = '𠮷a';for (let ch of s) { console.log(ch.codePointAt(0).toString(16));}`
 ### Array
 * Array.of(a,b,c...)代替new Array(...),因为`new Array(3)//[undefined × 3];newArray(3,4)//[3,4]`
-* 除let of外,遍历:forEach(), filter(), every() 和some() map(/*但此结果包括空位*/)都会跳过空位,es6规定空位被转化为undefined，由于空位的处理规则非常不统一，所以建议避免出现空位。
+* 除let of外,遍历:forEach(), filter(), every() 和some() map(此结果包括空位)都会跳过空位,es6规定空位被转化为undefined，由于空位的处理规则非常不统一，所以建议避免出现空位。
