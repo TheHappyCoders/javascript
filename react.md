@@ -139,4 +139,37 @@ $ cd android && ./gradlew assemble[PlatformName]Release
 会生成特定平台apk，如assembleXiaomiRelease
 </pre>
 * 在android/app/build/outputs下找到对应的apk
-
+### react-native-web 实现的component和api
+#### Components
+<pre>
+Button
+ListView
+ScrollView
+Image
+View
+Text
+TextInput
+TouchableHighlight (mirrors React Native)
+TouchableOpacity (mirrors React Native)
+TouchableWithoutFeedback
+Switch
+ProgressBar
+ActivityIndicator
+</pre>
+#### APIs
+<pre>
+Animated (mirrors React Native)
+AppRegistry
+AppState
+AsyncStorage
+Clipboard
+Dimensions
+I18nManager
+NativeMethods
+NetInfo
+PanResponder (mirrors React Native)
+PixelRatio
+Platform
+StyleSheet
+Vibration
+</pre>
