@@ -18,3 +18,14 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 2. 无论浏览器自带的返回前进按钮，还是`history.go(-1)、history.back()...`到新的页面代码都会重新执行一次
 ### 移动端viewport设置
  `<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0">`
+### console [nodejs与浏览器共同部分]
+1. error 错误
+2. warn 警告
+3. info 提示
+4. log 日志
+5. assert 断言 false时输出
+6. dir 目录样式输出对象的属性
+7. trace 堆栈跟踪
+8. time 执行时间分析`console.time("t1");console.timeEnd("t1")`
+9. timeEnd
+
