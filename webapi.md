@@ -28,4 +28,10 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 7. trace 堆栈跟踪
 8. time 执行时间分析`console.time("t1");console.timeEnd("t1")`
 9. timeEnd
-
+### 常用行内元素
+* 表单`(label button textarea select input...)`
+* span img
+### 常用块元素
+* `address 地址,section一个页面区段, article文章内容, aside伴随内容, header头, footer脚`
+* `audio video canvas`
+* `div form ul ol h1-6 table p`
