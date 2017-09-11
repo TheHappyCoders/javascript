@@ -1,4 +1,4 @@
-### mac iphone配置(截图，破解包见当前文件夹)
+### mac iphone配置(截图，破解包，见当前文件夹)
 ####基本配置
 * 1.安装charles4.1.4, 并破解(finder->应用程序->charles右键显示包内容->contents->java->charles.jar替换)
 * 2.iphone 手机代理设置，必须与mac在同一个局域网，手机wifi点进去(android长按) 代理手动，填mac局域网ip 默认8888端口
