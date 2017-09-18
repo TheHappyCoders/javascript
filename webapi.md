@@ -48,3 +48,4 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 * 添加删除元素 `node.appendChild(node2) node.removeChild(node2) node.replaceChild(被替换,node2) node.insertBefore(插入的,node2)`
 * 复制元素 `cloneNode(bool)`
 * 创建元素 `createElement(tag) createTextNode(text)`
+#### [点击复制内容到剪贴板](https://github.com/necolas/react-native-web/blob/master/src/apis/Clipboard/index.js)
