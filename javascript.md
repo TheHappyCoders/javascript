@@ -169,7 +169,7 @@ Array.prototype.sort|排序后新数组
 Array.prototype.reverse|修改后数组
 Array.prototype.splice|删除的元素组成的数组
 
-###Set WeakSet, Map WeakMap
+### Set WeakSet, Map WeakMap
 * 总结：Weak 都不可遍历(keys values entries foreach) 垃圾回收不考虑此引用
 类型|用途|属性|方法|遍历
 -|-|-|-|-
