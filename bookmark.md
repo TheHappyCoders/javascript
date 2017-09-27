@@ -5,7 +5,7 @@
 [npm文档](https://docs.npmjs.com/getting-started/updating-local-packages)       
 [webpack中文文档](https://doc.webpack-china.org/configuration/)    
 [mozilla文档](https://developer.mozilla.org/zh-CN/)         
-[react 中文文档](https://discountry.github.io/react/docs/hello-world.html)
+[react 中文文档](https://discountry.github.io/react/docs/hello-world.html)      
 [react native中文](http://reactnative.cn/docs/0.48/getting-started.html)
 ### 文章
 [跨域请求](http://www.ruanyifeng.com/blog/2016/04/cors.html)            
