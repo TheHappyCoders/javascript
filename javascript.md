@@ -178,3 +178,14 @@ Set|值不重复|size|add delete has clear|yes
 WeakSet|值不重复,且为对象,且垃圾回收不考虑此引用|no|add delete has|no
 Map|键可以为对象|size|[set get]delete has clear|yes
 WeakMap|键为对象,且垃圾回收不考虑此引用|no|[set get] delete has|no
+### ajax请求
+  `var xhr = new XMLHttpRequest();//新建ajax请求，不兼容IE7以下
+  xhr.onreadystatechange = function(){//注册回调函数
+    if(xhr.readyState === 4){
+        success(xhr.responseText);
+    } 
+  }
+  xhr.open(method,url,true);
+  xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  xhr.send(JSON.stringify(data));//发送的数据需要转化成JSON格式`
+ 
