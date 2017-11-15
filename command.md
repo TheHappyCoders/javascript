@@ -10,13 +10,14 @@
 
 ### git 命令
 * 克隆仓库 `$ git clone git://github.com/schacon/ticgit.git`
-* 创建分支 `arc feature 分支名 `
+* 创建分支 `arc feature 分支名 ` `git branch 分支名;git checkout分支名||git checkout -b 分支名`
 * 查看分支状态  `arc feature`
 * 删除某分支 `git branch -d 分支名`
 * 查看分支情况 `git branch`
-* 某文件远程覆盖本地 `git checkout 文件名`
+* 优先级为:从暂存区,当前最后一次commit,拿此文件替换工作区此文件 `git checkout --文件名`
 * 显示有变更的文件 `git status `
-* 显示当前分支的版本历史 `git log `
+* 显示当前分支的版本历史 `git log [--pretty=oneline]`
+* 显示历史操作记录 `git reflog`
 * 查看修改情况 `git diff `
 * 把一个分支的修改合并到当前分支 如果有冲突会提醒 git rebase (在解决完冲突后，用"git add -A"命令去更新这些内容的索引(index), 然后，你无需执行 git commit,只要执行:git rebase --continue)
 
@@ -31,7 +32,7 @@
 8. 代码审核通过后（arc feature查看审核状态) 执行`arc land`提交代码到服务端
 
 #### 撤回代码
-* 语法 git reset －－[mixed默认|hard|soft] commit号|HEAD~n
+* 语法 git reset －－[mixed默认|hard|soft] commit号|HEAD~n|HEAD^^^|HEAD^
 * hard－>add之前文件也还原(回到1) mixed－>add之前(回到2) soft－>commit之前，保留add(回到3)
 * <--1-modify--2--add--3--commit--4-- 
 
