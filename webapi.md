@@ -49,7 +49,7 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 * 复制元素 `cloneNode(bool)`
 * 创建元素 `createElement(tag) createTextNode(text)`
 * document.execCommand('commandname') 如'copy'复制选中的文字
-* 某个元素里面插入元素 ele.insertAdjacentHTML(position, text); adjacent:临近的 position:beforebegin <afterbegin ele beforeend> afterend
+* 某个元素里面插入元素 ele.insertAdjacentHTML(position, text); adjacent:临近的 position:beforebegin [afterbegin ele beforeend] afterend
 #### [点击复制内容到剪贴板](https://github.com/necolas/react-native-web/blob/master/src/apis/Clipboard/index.js)
 ### window
 #### 常用属性
