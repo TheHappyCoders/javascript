@@ -40,7 +40,7 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 * 首次获取 `document.body, document.head, document.getElementById('id'), document.getElementsByClassName('classname'), document.getElementsByName('name'), document.getElementsByTagName('tagname'), document.querySelector('string'), document.querySelectorAll('string')`
 * 查父元素 `node.parentNode`
 * 查兄弟元素 `node.previousSibling, node.nextSibling`
-* 查子元素 `node.childNodes, node.firstChild, node.lastChild, (node.hasChildNodes()是否有子元素)`
+* 查子元素 `node.childNodes(包含text于comment),node.children, node.firstChild, node.lastChild, (node.hasChildNodes()是否有子元素)`
 * 其它 `document.charset document.cookie document.domain document.title document.images`
 #### 常用方法
 * 属性 `node.getAttribute(name) node.hasAttribute(name) node.removeAttribute(name) node.setAttribute(name,value) node.innerHTML`
