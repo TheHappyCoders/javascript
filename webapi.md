@@ -35,17 +35,42 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 * `address 地址,section一个页面区段, article文章内容, aside伴随内容, header头, footer脚`
 * `audio video canvas`
 * `div form ul ol h1-6 table p`
-### dom快速查询
-#### document获取对象
+### document
+#### 常用属性
 * 首次获取 `document.body, document.head, document.getElementById('id'), document.getElementsByClassName('classname'), document.getElementsByName('name'), document.getElementsByTagName('tagname'), document.querySelector('string'), document.querySelectorAll('string')`
 * 查父元素 `node.parentNode`
 * 查兄弟元素 `node.previousSibling, node.nextSibling`
 * 查子元素 `node.childNodes, node.firstChild, node.lastChild, (node.hasChildNodes()是否有子元素)`
 * 其它 `document.charset document.cookie document.domain document.title document.images`
-#### document成员操作
+#### 常用方法
 * 属性 `node.getAttribute(name) node.hasAttribute(name) node.removeAttribute(name) node.setAttribute(name,value) node.innerHTML`
 * classList `cl.add(class) cl.remove(class) cl.toggle(class) cl.contains(class)`
 * 添加删除元素 `node.appendChild(node2) node.removeChild(node2) node.replaceChild(被替换,node2) node.insertBefore(插入的,node2)`
 * 复制元素 `cloneNode(bool)`
 * 创建元素 `createElement(tag) createTextNode(text)`
 #### [点击复制内容到剪贴板](https://github.com/necolas/react-native-web/blob/master/src/apis/Clipboard/index.js)
+### window
+#### 常用属性
+* window.devicePixelRatio
+* window.document
+* window.history
+* window.location
+* window.innerWidth
+* window.innerHeight
+* Window.localStorage
+* window.navigator
+* window.outerWidth
+* window.outerHeight
+* window.scrollX
+* window.scrollY
+* window.sessionStorage 
+* window.screen
+#### 常用方法
+* window.scrollTo(x,y)
+* window.scrollBy(x-add,y-add)
+* window.print()
+* window.confirm()
+* window.alert()
+* window.prompt(title-string)
+* window.setTimeout()/clearTimeout
+* window.setInterval()/clearInterval
