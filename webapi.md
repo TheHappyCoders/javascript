@@ -65,6 +65,7 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 * window.scrollY
 * window.sessionStorage 
 * window.screen
+* window.console
 #### 常用方法
 * window.scrollTo(x,y)
 * window.scrollBy(x-add,y-add)
