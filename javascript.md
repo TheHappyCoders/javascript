@@ -1,6 +1,6 @@
 
 ### [es2015(es6) Core features](http://exploringjs.com/es6/ch_core-features.html#sec_from-iifes-to-blocks)
-* From var to const/let 
+* From var to const/let (var 声明的全局变量，会加入window对象，千万不要用var！)
 * From IIFEs(函数包裹作用域,立即执行函数) to blocks({})
 * From concatenating strings(拼接字符串 +) to template literals(模版字符串\`${}\`)
 * From function expressions to arrow functions
