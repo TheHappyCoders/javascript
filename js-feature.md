@@ -148,26 +148,6 @@ Object.prototype.isPrototypeOf()
 Object.prototype.propertyIsEnumerable()
 Object.prototype.toString()
 </pre>
-### String
-* 增加识别32bit字符，如“𠮷”("\uD842\uDFB7")
-* 获取字符的码点，用char.codePointAt(index)代替char.charCodeAt(index)
-* 从码点返回对应字符，用String.fromCodePoint(codepoint)代替String.fromCharCode(codepoint)
-* for of才能识别32bit字符，正确分割码点 `var s = '𠮷a';for (let ch of s) { console.log(ch.codePointAt(0).toString(16));}`
-### Array
-* Array.of(a,b,c...)代替new Array(...),因为`new Array(3)//[undefined × 3];newArray(3,4)//[3,4]`
-* 除let of外,遍历:forEach(), filter(), every() 和some() map(此结果包括空位)都会跳过空位,es6规定空位被转化为undefined，由于空位的处理规则非常不统一，所以建议避免出现空位。
-#### 函数修改原始值的方法(9个)
-修改原始值的方法|函数返回值
--|-
-Array.prototype.copyWithin|修改后数组
-Array.prototype.fill|修改后数组
-Array.prototype.pop|删除的数组
-Array.prototype.push|数组长度
-Array.prototype.shift|删除的数组
-Array.prototype.unshift|数组长度
-Array.prototype.sort|排序后新数组
-Array.prototype.reverse|修改后数组
-Array.prototype.splice|删除的元素组成的数组
 
 ### Set WeakSet, Map WeakMap
 * 总结：Weak 都不可遍历(keys values entries foreach) 垃圾回收不考虑此引用
@@ -178,16 +158,4 @@ Set|值不重复|size|add delete has clear|yes
 WeakSet|值不重复,且为对象,且垃圾回收不考虑此引用|no|add delete has|no
 Map|键可以为对象|size|[set get]delete has clear|yes
 WeakMap|键为对象,且垃圾回收不考虑此引用|no|[set get] delete has|no
-### ajax请求
-<pre>
-  var xhr = new XMLHttpRequest();//新建ajax请求，不兼容IE7以下
-  xhr.onreadystatechange = function(){//注册回调函数
-    if(xhr.readyState === 4){
-        success(xhr.responseText);
-    } 
-  }
-  xhr.open(method,url,true);
-  xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-  xhr.send(JSON.stringify(data));//发送的数据需要转化成JSON格式
-</pre>
- 
+
