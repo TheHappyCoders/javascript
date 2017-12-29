@@ -8,6 +8,26 @@
 * 下载：`scp user（远端用户名）@host（远端IP):/path/file（下载文件在远端的路径） localpathorfile（本地文件存放路径）`
 * 登录连接ecs `ssh root@ip`
 
+### mac终端命令
+* 获取权限 `shdo -s`
+* 列出文件 `ls [文件路径] [-w 显示中文] [-l 详细文件] [-a 包含隐藏文件]`
+* 创建新目录 `mkdir 目录名`
+* 拷贝文件 `cp [-R 递归操作(文件夹)] 源文件路径 目标文件路径`
+* 删除文件 `rm [-rf 递归和强制] 文件或文件夹`
+* 移动文件 `mv 源文件路径 目标文件路径`
+* 更改文件权限 `chmod [-R 递归] 权限(读写执行777) 文件或文件夹`
+* 更改文件属主 `chown [-R 递归] 用户:组 文件`
+* 编辑文件 `vi 文件; 1.输入i开始编辑; 2.输入esc,输入:[q|w]!;回车退出`
+* 显示当前路径 `pwd`
+* 显示日期 `date`
+* 显示日历 `cal [月份 年] 如cal 8 1987`
+* 命令行历史记录 `history`
+* 环境变量 `env`
+* 清屏 `clear`
+* 当前操作的用户名 `whoami`
+* 当前目录文件大小 `du`
+* 系统空间使用情况 `df`
+
 ### git 命令
 * 克隆仓库 `$ git clone git://github.com/schacon/ticgit.git`
 * 创建分支 `arc feature 分支名 ` `git branch 分支名;git checkout分支名||git checkout -b 分支名`
@@ -47,7 +67,7 @@
 * window打开chrome控制台 `f12`
 
 ### windows Mac 键盘对应
-* commend变成Win(田字) 
+* command变成Win(田字) 
 * option变成alt(苹果键盘上也有写）
 
 ### mac 系统快捷键
