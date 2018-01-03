@@ -1,0 +1,44 @@
+
+===dom获取====
+ 1.选取dom
+ document.body, 
+ document.head, 
+ document.getElementById('id'),
+ document.getElementsByClassName('classname'),
+ document.getElementsByName('name'), 
+ document.getElementsByTagName('tagname'), 
+ document.querySelector('string'), 
+ document.querySelectorAll('string')
+
+ 2.dom亲戚关系获取，祖先,兄弟姐妹,子女,
+ node.parentNode
+ node.previousSibling, 
+ node.nextSibling
+ node.childNodes(包含text于comment),
+ node.children, 
+ node.firstChild, 
+ node.lastChild, 
+ node.hasChildNodes()是否有子元素
+
+===dom属性操作===
+node.getAttribute(name) 
+node.hasAttribute(name) 
+node.removeAttribute(name) 
+node.setAttribute(name,value) 
+node.innerHTML
+node.classList( cl.add(class) cl.remove(class) cl.toggle(class) cl.contains(class) )
+
+===dom内容===
+ele.innerHTML 
+ele.outerHTML 
+ele.textContent
+node.appendChild(node2) 
+node.removeChild(node2) 
+node.replaceChild(被替换,node2) 
+node.insertBefore(插入的,node2)
+cloneNode(bool) 
+el.contains(child)
+createElement(tag) 
+createTextNode(text) 
+createAttribute(attribute-name)
+ele.insertAdjacentHTML(position, text); adjacent:临近的 position:beforebegin [afterbegin ele beforeend] afterend

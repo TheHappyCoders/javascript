@@ -41,7 +41,7 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 * 查父元素 `node.parentNode`
 * 内容 `ele.innerHTML ele.outerHTML ele.textContent`
 * 查兄弟元素 `node.previousSibling, node.nextSibling`
-* 查子元素 `node.childNodes(包含text于comment),node.children, node.firstChild, node.lastChild, (node.hasChildNodes()是否有子元素)`
+* 查子元素 `node.childNodes(包含text与comment),node.children, node.firstChild, node.lastChild, (node.hasChildNodes()是否有子元素)`
 * 其它 `document.charset document.cookie document.domain document.title document.images`
 * element尺寸  内`clientWidth clientHeight ` 外`offsetWidth offsetHeight offsetTop offsetLeft`
 #### 常用方法
