@@ -1,3 +1,4 @@
+### 目录分类根据[mdn](https://developer.mozilla.org/zh-CN/docs/Web/Guide/Graphics)分为css、html、javascript、webapi
 ### web api 参考https://developer.mozilla.org/zh-CN/docs/Web/Reference/API
 1. 文档对象模型（Document Object Model）
 DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作文档里的Node和Element。HTML，XML 和 SVG 都扩展了基本的 DOM 接口来操作它们各自私有的元素类型。
@@ -8,14 +9,10 @@ DOM 是一个 可以访问和修改当前文档的  API。通过它可以操作�
 4. 数据管理 APIs（Data management APIs）
 这套 API 可以用来存储和管理用户的数据，如：文件处理 API、IndexedDB。
 除了上面这些公开的，所有网页和应用程序都可以使用的 API 以外，还有一类更强大的，但只有特权应用程序和已认证应用程序能够使用的，非标准的 Mozilla 私有 API。
-
 5. 特权 API（Privileged APIs）
 特权应用程序是那些由用户给予了特定权限的应用程序。特权 API 包括：TCP Socket API、联系人 API、设备存储 API、浏览器 API、相机 API。
 6. 已认证应用程序的私有 API（Certified APIs）
 已认证的应用程序是那些直接与操作系统（比如 Firefox OS）打交道，执行核心操作的底层应用程序。较低特权的应用程序可以通过 Web Activities 调用这些底层应用程序。 这些 API 包括：蓝牙 API、手机连接 API、网络状态 API、通话 API、短信/彩信 API、WiFi 信息 API、电源管理 API、设置 API、空闲状态 API、权限 API、时间/时钟 API。
-### 浏览器返回效果
-1. 表单中的内容会保留
-2. 无论浏览器自带的返回前进按钮，还是`history.go(-1)、history.back()...`到新的页面代码都会重新执行一次
-#### [点击复制内容到剪贴板](https://github.com/necolas/react-native-web/blob/master/src/apis/Clipboard/index.js)
+
 
 
