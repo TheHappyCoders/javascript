@@ -1,5 +1,5 @@
 
-### [es2015(es6) Core features](http://exploringjs.com/es6/ch_core-features.html#sec_from-iifes-to-blocks)
+# [es2015(es6) Core features](http://exploringjs.com/es6/ch_core-features.html#sec_from-iifes-to-blocks)
 * From var to const/let (var 声明的全局变量，会加入window对象，千万不要用var！)
 * From IIFEs(函数包裹作用域,立即执行函数) to blocks({})
 * From concatenating strings(拼接字符串 +) to template literals(模版字符串\`${}\`)
@@ -51,11 +51,11 @@ const obj = {
 * New Array methods 
 * From CommonJS modules to ES6 modules
 
-### 语言进化
+# 语言进化
 * module and class default is use strict 类和模块隐式为严格模式;
 
 
-### break continue
+# break continue
 1. 都可以用于循环
 2. break还可以用于switch语句及跳出代码块
 <pre>
@@ -106,7 +106,7 @@ outer_block:{
   console.log ('2');        // skipped
 }
 </pre>
-### 用新对象Reflect代替Object部分静态方法与function的apply方法
+# 用新对象Reflect代替Object部分静态方法与function的apply方法
 <pre>
 1.原因4点,见http://es6.ruanyifeng.com/#docs/reflect
 
@@ -149,7 +149,7 @@ Object.prototype.propertyIsEnumerable()
 Object.prototype.toString()
 </pre>
 
-### Set WeakSet, Map WeakMap
+# Set WeakSet, Map WeakMap
 * 总结：Weak 都不可遍历(keys values entries foreach) 垃圾回收不考虑此引用
 
 类型|用途|属性|方法|遍历
@@ -159,10 +159,10 @@ WeakSet|值不重复,且为对象,且垃圾回收不考虑此引用|no|add delet
 Map|键可以为对象|size|[set get]delete has clear|yes
 WeakMap|键为对象,且垃圾回收不考虑此引用|no|[set get] delete has|no
 
-### 闭包
-#### 定义
+# 闭包
+## 定义
 * 闭包就是当一个函数即使是在它的词法作用域之外被调用时，也可以记住并访问它的词法作用域。
-#### 常见场景-将这个函数送到词法作用域外，然后调用
+## 常见场景-将这个函数送到词法作用域外，然后调用
 * 这个函数被函数return
 <pre>
 function foo() {
@@ -184,3 +184,39 @@ function wait(message) {
 
 wait( "Hello, closure!" );
 </pre>
+# [类型转换](http://javascript.ruanyifeng.com/grammar/conversion.html)
+## Number(x),x能转成功的有1数字,2纯数字字符串(会自动去掉前后空格，parseInt也是),3空字符串,4true,5false,6null,7[最多只有一个元素且是1,2情况]；x转化过程1.先调用valueOf 2.如果返回对象则调用toString 3.还是对象就报错
+```
+ Number(123|'123') //123
+ Number('123abc') //NaN
+ Number.parseInt('123abc') //123
+ Number(true|false) //1|0
+ Number(null|undefined) //0|NaN
+ Number([]) //0
+ Number([1]) //1
+ Number({}) //NaN
+```
+## String(x) x转化过程,1.调用toString,2.返回是对象再调用valueOf,3.还是对象报错
+```
+String(122) //"122"
+String('123') //"123"
+String(true|false) //"true"|"false"
+String(undefined|null)//"undefined"|"null"
+String({}) //"[object Object]"
+String([1,2,3]) //"1,2,3"
+```
+## Boolean(x) x为undefined、null、-0、+0、NaN、''、为false，其余全部为true
+```
+Boolean(new Boolean(false)) //true
+```
+## 自动转换
+### 自动转换场景
+* 不同类型的数据相互运算(123+'abc')
+* 对非布尔值类型的数据求布尔值(if('abc'){})
+* 对非数值类型的值使用一元运算符(+ -)
+### 自动转化规则
+* 预期是什么类型的值就调用该类型转换函数
+* 如果该位置预期即可以是字符串也可以是数值，转化为数值
+* 建议显示类型转换
+* 除了加法运算符（+）有可能把运算子转为字符串，其他运算符都会把运算子自动转成数值。
+* 一元运算符也会把运算子转成数值。+true //1
