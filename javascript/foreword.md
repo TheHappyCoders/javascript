@@ -192,7 +192,7 @@ wait( "Hello, closure!" );
  Number.parseInt('123abc') //123
  Number(true|false) //1|0
  Number(null|undefined) //0|NaN
- Number([]) //0
+ Number([]) //0
  Number([1]) //1
  Number({}) //NaN
 ```
@@ -220,3 +220,7 @@ Boolean(new Boolean(false)) //true
 * 建议显示类型转换
 * 除了加法运算符（+）有可能把运算子转为字符串，其他运算符都会把运算子自动转成数值。
 * 一元运算符也会把运算子转成数值。+true //1
+# script 解析过程
+* 正常 html解析=>遇到script下载然后执行=>继续html解析
+* defer html解析=>下载script同时继续html解析=>解析完后按顺序执行defer的script 
+* async html解析=>下载script同时继续html解析=>下载完就马上执行当前下载完的script=>恢复html解析
