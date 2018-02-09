@@ -8,9 +8,9 @@
 # 移动端viewport设置
  `<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0">`
  # 忽略电话号码识别
- <meta content="telephone=no" name="format-detection" />
+ `<meta content="telephone=no" name="format-detection" />`
  # 忽略邮箱
- <meta content="email=no" name="format-detection" />
+ `<meta content="email=no" name="format-detection" />`
  # seo优化
- 1. <meta name="keywords" content="your tags" />
- 2. <meta name="description" content="150 words" />
+ 1. `<meta name="keywords" content="your tags" />`
+ 2. `<meta name="description" content="150 words" />`
