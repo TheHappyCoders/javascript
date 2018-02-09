@@ -8,6 +8,13 @@
 7. trace 堆栈跟踪
 8. time 执行时间分析`console.time("t1");console.timeEnd("t1")`
 9. timeEnd
+10. 重写log，变颜色
+```
+var _log = console.log;
+console.log = function() {
+  _log.call(console, '%c' + [].slice.call(arguments).join(' '), 'color:transparent;text-shadow:0 0 2px rgba(0,0,0,.5);');
+};
+```
 ### window
 #### 常用属性
 * window.devicePixelRatio
