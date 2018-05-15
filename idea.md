@@ -1,4 +1,4 @@
-Ctrl+Shift + Enter，语句完成
+#Ctrl+Shift + Enter，语句完成
 “！”，否定完成，输入表达式时按 “！”键
 Ctrl+E，最近的文件
 Ctrl+Shift+E，最近更改的文件
