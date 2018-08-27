@@ -39,7 +39,7 @@
 * 显示当前分支的版本历史 `git log [--pretty=oneline]`
 * 显示历史操作记录 `git reflog`
 * 查看修改情况 `git diff `
-* 不通过审核提交代码 `git push 远程分支(origin)`
+* 不通过审核提交代码 `git push <远程主机名> <本地分支名>:<远程分支名>`
 * 把一个分支的修改合并到当前分支 如果有冲突会提醒 git rebase (在解决完冲突后，用"git add -A"命令去更新这些内容的索引(index), 然后，你无需执行 git commit,只要执行:git rebase --continue)
 
 #### 提交代码
