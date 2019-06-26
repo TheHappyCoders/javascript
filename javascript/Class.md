@@ -127,6 +127,10 @@ constructor() {}
 constructor(...args) {
   super(...args);
 }
+//-------
+class a {constructor(a){this.a=a;}};
+class b extends a{}
+new b(1)//{a:1}
 ```
 * 派生类可以继承父类的属性与方法
 
