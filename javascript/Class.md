@@ -63,9 +63,9 @@ class Boy extends People {
     
     //异步函数 串行执行 比如获取了用户的银行余额 再去付款
     async serial(){
-        let b= await Promise.resolve(1);
+        let b= await Promise.resolve(1);//返回值，不是promise
         let c= await Promise.resolve(b);
-        return c;
+        return c; //返回promise包装
     },
     
     //静态方法 自我实现四舍五入
