@@ -249,7 +249,7 @@ class Point {
 typeof Point // "function" 类的数据类型就是函数
 Point === Point.prototype.constructor // true 类本身就指向构造函数
 ```
-* 类有prototype和__proto__ ,对象实例只有、__proto__
+* 类有prototype和__proto__ ,对象实例只有__proto__
 ```
 function Foo(){}
 let p= new Foo();
