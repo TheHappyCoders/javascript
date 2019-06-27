@@ -15,14 +15,14 @@ class People {
         this.sex= sex;
     }
 }
-
+//类里面的成员方法与属性都采用小驼峰
 class Boy extends People {
     constructor(name,age) {
         super(namw,age,'男');
     }
     
     /*私有属性与私有方法在属性或方法上加#,只能在类内部使用 私有属性和私有方法前面，也可以加上static关键字，
-    表示这是一个静态的私有属性或私有方法 私有只是提案，现有chrome已经实现*/
+    表示这是一个静态的私有属性或私有方法 私有只是提案，现有chrome已经实现，见1.1*/
     #a;
     #b=3;
     static #c= 4;
@@ -36,15 +36,16 @@ class Boy extends People {
     money= 1000;
     
     //静态属性 通过类访问
-    static maxAge= 120;
+    static maxAge= 120;//见1.2
     
     //getter
     get age(){
-        retun this.age+1;
+        retun this.age+1;//见1.4
     }
     //setter
     set age(value){
-        this._age= Math.floor(value);
+        this.age= Math.floor(value);
+        //setter方法在对象中(非类)需要注意 可能内存溢出，见1.3
     }
     
     //静态方法 不能访问实例属性与方法
@@ -78,7 +79,76 @@ class Boy extends People {
     }
 }
 ```
-* 方法之间不需要逗号分隔，加了会报错
+```
+//1.1
+class PrivateVar{
+    #a=2;
+    b=3;
+    getA(){
+        return this.#a;
+    }
+}
+var p1= new PrivateVar();
+console.log(p1.#a);//报错
+console.log(p1.b);//3
+console.log(p1.getA());//2
+```
+```
+//1.2
+class Static1{
+    static width= 200;
+    height= 100;
+    static getArea(){
+        //错误写法 静态不能访问非静态属性
+        return Static1.width*this.height;
+    }
+    getMaxSide(){
+        //非静态方法可以访问静态属性
+        return Math.max(Static1.width,this.height);
+    }
+}
+let s1= new Static1();
+s1.getMaxSide();
+Static1.gettArea();
+/*NaN (一个数字与undefined相加=NaN,null+数字=数字，字符串+数字=字符串拼接,true+1=2,false+1=1,对象+1=1)
+转化优先级undefined,null,boolean=>number=>string,
+1.任何与字符串相加都是字符串
+2.其它相加先转化为数字，undefined=》NaN,null=>0
+3.NaN与其它数字相加等于NaN*/
+```
+```
+//1.3
+let user = {
+  name: 'xx'.
+  get name() {
+    return this.name;
+  },
+  set name(value) {
+    this.name = value //这句话报错了
+  }
+};
+user.name = "Peter"; //尝试赋值的时候报错Uncaught RangeError: Maximum call stack size exceeded
+//解决方法
+let user = {
+  _name:'xx',
+  get name() {
+    return this._name;
+  },
+  set name(value) {
+    this._name = value //设置一个中转变量
+  }
+};
+```
+```
+//1.4
+class SetVar{
+    m=2;
+    set m(d){this.m=d}
+}
+let d=new SetVar();
+d.m=99;//{m:99}
+```
+* 类方法之间不需要逗号分隔，加了会报错
 * 类的内部所有定义的方法，都是不可枚举的（non-enumerable）。
 ```
 class Point {
@@ -115,6 +185,7 @@ class Logger {
   // ...
 }
 ```
+* 类名采用大驼峰命名(单词首字母大写)
 
 # 类的继承
 * 类继承使用 extends 关键字
@@ -128,9 +199,9 @@ constructor(...args) {
   super(...args);
 }
 //-------
-class a {constructor(a){this.a=a;}};
-class b extends a{}
-new b(1)//{a:1}
+class A {constructor(a){this.a=a;}};
+class B extends A{}
+new B(1)//{a:1}
 ```
 * 派生类可以继承父类的属性与方法
 
@@ -141,7 +212,8 @@ new b(1)//{a:1}
 
 
 # es5下的面向对象
-* 生成实例对象的传统方法是通过构造函数 ES6 的class可以看作只是一个语法糖，它的绝大部分功能，ES5 都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已
+* 生成实例对象的传统方法是通过构造函数 ES6 的class可以看作只是一个语法糖，它的绝大部分功能，ES5 都可以做到，
+新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已
 ```
 function Point(x, y) {
   this.x = x;
