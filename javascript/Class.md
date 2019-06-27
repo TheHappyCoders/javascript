@@ -205,11 +205,25 @@ new B(1)//{a:1}
 ```
 * 派生类可以继承父类的属性与方法
 
-# 类的实例
+# 类的实例化
 * 调用 ```new 类名(参数a,b...)```，实际执行constructor构造方法，接收参数，实例化一个实例对象
 * 类的所有实例共享一个原型对象 类名.prototype
-
-
+* 继承与覆盖
+```
+class A {
+    x=1;
+    y(){}
+    z(){console.log('a')}
+}
+class B{
+    constructor(a){if(a){this.m=a;}}
+    m=2;
+    z(){console.log('b')}
+}
+let p= new B(9);//m值=9; 
+p.z();//'b' 覆盖了父类的z方法
+let p1= new B();// m值=2
+```
 
 # es5下的面向对象
 * 生成实例对象的传统方法是通过构造函数 ES6 的class可以看作只是一个语法糖，它的绝大部分功能，ES5 都可以做到，
@@ -235,3 +249,15 @@ class Point {
 typeof Point // "function" 类的数据类型就是函数
 Point === Point.prototype.constructor // true 类本身就指向构造函数
 ```
+* 类有prototype和__proto__ ,对象实例只有、__proto__
+```
+function Foo(){}
+let p= new Foo();
+/*
+p.__proto__===>Foo.prototype(其__proto__===>Object.prototype(其__proto__===>null))
+Foo.prototype,Object.prototype,Function.prototype都是由构造函数创建的
+自定义构造方法的__proto__=>Function.prototype(其__proto__==>Object.prototype) 
+见github 图
+*/
+```
+
