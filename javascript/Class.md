@@ -18,7 +18,7 @@ class People {
 //类里面的成员方法与属性都采用小驼峰
 class Boy extends People {
     constructor(name,age) {
-        super(namw,age,'男');
+        super(name,age,'男');
     }
     
     /*私有属性与私有方法在属性或方法上加#,只能在类内部使用 私有属性和私有方法前面，也可以加上static关键字，
