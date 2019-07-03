@@ -1,5 +1,12 @@
 # mydoc
 学习笔记 study 
+### 目录解释
+* browser 浏览器相关(DOM: Document Object Model,BOM:Browser Object Model[window对象])
+* ebook 电子书
+* framework 框架
+* javascript ECMAScript
+* other 未归类 常用功能代码片段 工具
+* test github知识求答附代码
 
 ### markdown
 * -表格-
