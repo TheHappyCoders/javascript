@@ -1,3 +1,10 @@
-# Array Object Set WeakSet Map WeakMap区别
-* Array Set WeakSet 都是队列结构,Set 不重复值,WeakSet 不重复,弱引用(值必须对象,所指向的对象，不计入垃圾回收机制)
-* Object  Map WeakMap 都是字典结构, Map 可以对象为键,WeakMap 弱引用(键必须对象,键所指向的值，不计入垃圾回收机制)
+
+# Set WeakSet, Map WeakMap
+* 总结：Weak  弱引用,垃圾回收不考虑此引用
+
+类型|用途|属性|方法|遍历
+-|-|-|-|-
+Set|值不重复|size|add delete has clear|yes
+WeakSet|值不重复,且为对象,且垃圾回收不考虑此引用|no|add delete has|no
+Map|键可以为对象|size|[set get]delete has clear|yes
+WeakMap|键为对象,且垃圾回收不考虑此引用|no|[set get] delete has|no
