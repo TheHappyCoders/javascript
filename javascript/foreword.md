@@ -66,7 +66,7 @@ const obj = {
  Number([1]) //1
  Number({}) //NaN
 ```
-## String(x) x转化过程,1.调用toString,2.返回是对象再调用valueOf,3.还是对象报错
+## String(x) x转化过程,1.调用toString,2.返回是对象再调用valueOf,3.还是对象报错
 ```
 String(122) //"122"
 String('123') //"123"
