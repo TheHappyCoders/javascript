@@ -14,3 +14,7 @@
  # seo优化
  1. `<meta name="keywords" content="your tags" />`
  2. `<meta name="description" content="150 words" />`
+ # script 解析过程
+* 正常 html解析=>遇到script下载然后执行=>继续html解析
+* defer html解析=>下载script同时继续html解析=>解析完后按顺序执行defer的script 
+* async html解析=>下载script同时继续html解析=>下载完就马上执行当前下载完的script=>恢复html解析
