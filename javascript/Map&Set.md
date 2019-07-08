@@ -61,7 +61,7 @@ for (let item of set.entries()) {
 // ["green", "green"]
 // ["blue", "blue"]
 ```
-# WeakSet 不重复的值 弱引用 只能放置对象  没有size属性,也没办法遍历
+# WeakSet 不重复的值, 弱引用, 只能放置对象,  没有size属性,也没办法遍历
 * 只能放对象
 ```
 const b = [3, 4];
@@ -100,7 +100,7 @@ map.delete(1)//true 成功true 失败false
 map.clear()//除所有成员，没有返回值
 
 ```
-* 遍历方法 keys values entries forEach (遍历顺序就是插入顺序) 默认遍历器接口entries(for (let [key, value] of map) {})
+* 遍历方法 keys values entries forEach (遍历顺序就是插入顺序), 默认遍历器接口entries(for (let [key, value] of map) {})
 ```
 for (let key of map.keys()) {
   console.log(key);
@@ -126,7 +126,7 @@ const myMap = new Map()
 // [ [ true, 7 ], [ { foo: 3 }, [ 'abc' ] ] ]
 ```
 
-# WeakMap 只接受对象作为键名（null除外）键名弱引用 不可遍历 没有size属性
+# WeakMap 只接受对象作为键名（null除外）,键名弱引用, 不可遍历, 没有size属性
 * DOM 节点作为键名
 ```
 //一旦这个 DOM 节点删除，该状态就会自动消失，不存在内存泄漏风险。
