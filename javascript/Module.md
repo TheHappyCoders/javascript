@@ -1,14 +1,11 @@
 # 模块导入与导出
 操作|语法|重命名|对应导入|对应导入重命名
 -|-|-|-|-
-直接导出<b>变量</b>|```export var a=2;```|no|```import {a} from 'x';```|```import {a as b} from 'x';```
-先申明,再导出<b>变量</b>|```var a=2,b=3;export {a,b};```|```export {a as c,b};```|```import {a,b} from 'x';```|```import {a as c,b} from 'x';```
-直接导出<b>函数</b>|```export function m(){};```|no|```import {m} from 'x';```|```import {m as b} from 'x';```
-先申明,再导出<b>函数</b>|```function m(){};export {m};```|```export {m as c};```|```import {m} from 'x';```|```import {m as b} from 'x';```
-<b>默认</b>导出<b>函数</b>|```export default function(){};```|不需要|```import a from 'x';```|不需要
-先申明,再<b>默认</b>导出<b>函数</b>|```function a(){};export default a;```|不需要|```import a from 'x';```|不需要
-<b>默认</b>导出<b>值</b>|```export default 44;```|不需要|```import a from 'x';```|不需要
-先申明,再<b>默认</b>导出<b>变量</b>|```var a=2;export default a;```|不需要|```import a from 'x';```|不需要
+直接导出|```export var a=2;or export function a(){};```|no|```import {a} from 'x';```|```import {a as b} from 'x';```
+先申明,再导出|```var a=2,b=3;export {a,b};or function a(){};export {a};```|```export {a as c,b};```|```import {a,b} from 'x';```|```import {a as c,b} from 'x';```
+默认导出|```export default function(){};or export default 44;```|不需要|```import a from 'x';```|不需要
+先申明,再默认导出|```function a(){};export default a;or var a=2;export default a;```|不需要|```import a from 'x';```|不需要
+
 
 * 总结： 默认导入导出不需要重命名,因为导入的名字可以随便取;非默认导入导出 {}里都支持重命名
 
