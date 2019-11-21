@@ -1,3 +1,4 @@
+<pre>
 fs.access(path[, mode], callback)
 fs.accessSync(path[, mode])
 fs.appendFile(path, data[, options], callback)
@@ -82,3 +83,4 @@ fs.writeSync(fd, buffer[, offset[, length[, position]]])
 fs.writeSync(fd, string[, position[, encoding]])
 fs.writev(fd, buffers[, position], callback)
 fs.writevSync(fd, buffers[, position])
+</pre>
