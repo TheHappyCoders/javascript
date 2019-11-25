@@ -20,10 +20,12 @@ fs.chmod(path, mode, callback)更改文件的权限
 fs.chmodSync(path, mode)
 fs.chown(path, uid, gid, callback) 更改文件的所有者和群组
 fs.chownSync(path, uid, gid)
+F
 fs.fchmod(fd, mode, callback)
 fs.fchmodSync(fd, mode)
 fs.fchown(fd, uid, gid, callback)
 fs.fchownSync(fd, uid, gid)
+L
 fs.lchmod(path, mode, callback) 更改文件权限(不解析符号链接)
 fs.lchmodSync(path, mode)
 fs.lchown(path, uid, gid, callback) 更改文件所有权（不解析符号链接）
@@ -37,13 +39,17 @@ fs.opendir(path[, options], callback)
 fs.opendirSync(path[, options])
 fs.readdir(path[, options], callback)
 fs.readdirSync(path[, options])
-读写
+fs.rmdir(path[, options], callback) 删除文件目录
+fs.rmdirSync(path[, options]) 
+文件
 fs.appendFile(path, data[, options], callback) 将数据追加到文件，如果文件尚不存在则创建该文件
 fs.appendFileSync(path, data[, options]) 
 fs.ftruncate(fd[, len], callback) 截取文件内容
 fs.ftruncateSync(fd[, len])
 fs.open(path[, flags[, mode]], callback) 打开文件
 fs.openSync(path[, flags, mode])
+fs.close(fd, callback)
+fs.closeSync(fd)
 fs.read(fd, buffer, offset, length, position, callback) 读取文件内容
 fs.readSync(fd, buffer, offset, length, position)
 fs.readFile(path[, options], callback)
@@ -60,11 +66,11 @@ fs.writev(fd, buffers[, position], callback)
 fs.writevSync(fd, buffers[, position])
 fs.truncate(path[, len], callback) 文件内容截取操作
 fs.truncateSync(path[, len])
-系统操作
-fs.close(fd, callback)
-fs.closeSync(fd)
 fs.copyFile(src, dest[, flags], callback) src 拷贝到 dest
 fs.copyFileSync(src, dest[, flags])
+fs.unlink(path, callback) 删除文件操作
+fs.unlinkSync(path)
+其它
 fs.fdatasync(fd, callback) 刷新数据到磁盘
 fs.fdatasyncSync(fd)
 fs.fsync(fd, callback) 同步缓存数据到磁盘
@@ -75,10 +81,6 @@ fs.link(existingPath, newPath, callback) 创建硬链接(只能在本券中)
 fs.linkSync(existingPath, newPath)
 fs.rename(oldPath, newPath, callback) 重命名路径
 fs.renameSync(oldPath, newPath)
-fs.rmdir(path[, options], callback) 删除文件目录
-fs.rmdirSync(path[, options]) 
-fs.unlink(path, callback) 删除文件操作
-fs.unlinkSync(path)
 fs.unwatchFile(filename[, listener]) 解除文件监控
 fs.utimes(path, atime, mtime, callback) 修改文件时间戳
 fs.utimesSync(path, atime, mtime)
