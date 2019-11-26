@@ -1,7 +1,7 @@
 
 <pre>
 【信息】
-<font color=red>fs.constants</font>
+<font color="#f1f1f1">fs.constants</font>
 fs.exists(path, callback) 废弃: 改为使用 fs.stat() 或 fs.access()
 fs.existsSync(path) 没废弃 通过检查文件系统来测试给定的路径是否存在
 realpath
