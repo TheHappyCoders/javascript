@@ -1,3 +1,4 @@
+# 常用的标记蓝色，方法默认异步，同步Sync， f filehand，L不解析符号链接
 ### 【信息】
 * [fs.constants]()
 * fs.exists(path, callback) 废弃: 改为使用 fs.stat() 或 fs.access()
