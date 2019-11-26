@@ -1,16 +1,17 @@
+
 <pre>
 【信息】
-<span style="color:red">fs.constants</span>
+<font color=red>fs.constants</font>
 fs.exists(path, callback) 废弃: 改为使用 fs.stat() 或 fs.access()
-<span style="color:red">fs.existsSync(path) 没废弃 通过检查文件系统来测试给定的路径是否存在</span>
+fs.existsSync(path) 没废弃 通过检查文件系统来测试给定的路径是否存在
 realpath
 fs.realpath(path[, options], callback) 获取真实路径
 fs.realpath.native(path[, options], callback)
-<span style="color:red">fs.realpathSync(path[, options])</span>
+fs.realpathSync(path[, options])
 fs.realpathSync.native(path[, options])
 stat
 fs.stat(path[, options], callback) 获取文件信息
-<span style="color:red">fs.statSync(path[, options])</span>
+fs.statSync(path[, options])
 fs.fstat(fd[, options], callback) 返回文件的详细信息
 fs.fstatSync(fd[, options])
 fs.lstat(path[, options], callback) 获取文件信息(不解析符号链接)
@@ -18,11 +19,11 @@ fs.lstatSync(path[, options])
 
 【权限】
 fs.access(path[, mode], callback)  测试用户对 path 指定的文件或目录的权限
-<span style="color:red">fs.accessSync(path[, mode])</span>
+fs.accessSync(path[, mode])
 fs.chmod(path, mode, callback)更改文件的权限
-<span style="color:red">fs.chmodSync(path, mode)</span>
+fs.chmodSync(path, mode)</span>
 fs.chown(path, uid, gid, callback) 更改文件的所有者和群组
-<span style="color:red">fs.chownSync(path, uid, gid)</span>
+fs.chownSync(path, uid, gid)
 F
 fs.fchmod(fd, mode, callback)
 fs.fchmodSync(fd, mode)
@@ -104,6 +105,5 @@ fs.futimesSync(fd, atime, mtime)
 【流】
 fs.createReadStream(path[, options])
 fs.createWriteStream(path[, options])
-
-
 </pre>
+
