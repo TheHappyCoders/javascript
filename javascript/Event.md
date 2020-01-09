@@ -1,6 +1,7 @@
 ### 触发自定义事件
 
-```var elem = document.querySelector('#div');
+```
+var elem = document.querySelector('#div');
  
 var event = document.createEvent('Event');
 
@@ -13,10 +14,10 @@ elem.addEventListener('myEvent', function (e) {
 }, false);
 
 // 使用目标对象去派发事件，可以是元素节点/事件对象
-elem.dispatchEvent(event);```
+elem.dispatchEvent(event);
+```
 
-
-###  触发resize事件
+### 触发resize事件
 
 ```
 //向window派发resize事件
