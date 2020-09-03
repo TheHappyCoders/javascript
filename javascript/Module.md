@@ -1,5 +1,5 @@
-##### 模块
-# commonjs amd cmd umd es6
+# 模块
+### commonjs amd cmd umd es6
 
 * commonjs nodejs模块规范 语法有require()  exports.a=b; exports.default={}
 ```
@@ -76,8 +76,8 @@ define(function (requie, exports, module) {
 * ES6：语言标准的模块化，取代UMD，服务器和浏览器都能使用
 
 
-##### es6
-# 模块导入与导出
+# es6
+### 模块导入与导出
 操作|语法|重命名|对应导入|对应导入重命名
 -|-|-|-|-
 直接导出|```export var a=2;or export function a(){};```|no|```import {a} from 'x';```|```import {a as b} from 'x';```
@@ -88,7 +88,7 @@ define(function (requie, exports, module) {
 
 * 总结： 默认导入导出不需要重命名,因为导入的名字可以随便取;非默认导入导出 {}里都支持重命名
 
-# export import 复合写法
+### export import 复合写法
 * 如果在一个模块之中，先输入后输出同一个模块，import语句可以与export语句写在一起
 ```
 export { foo, bar } from 'foo';//导出foo中的foo bar
