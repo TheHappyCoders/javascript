@@ -73,6 +73,15 @@ console.log = function() {
 * 创建元素 `createElement(tag) createTextNode(text) createAttribute(attribute-name)`
 * document.execCommand('commandname') 如'copy'复制选中的文字
 * 某个元素里面插入元素 ele.insertAdjacentHTML(position, text); adjacent:临近的 position:beforebegin [afterbegin  beforeend afterend]
+```
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 ### 浏览器返回效果
 1. 表单中的内容会保留
 2. 无论浏览器自带的返回前进按钮，还是`history.go(-1)、history.back()...`到新的页面代码都会重新执行一次
