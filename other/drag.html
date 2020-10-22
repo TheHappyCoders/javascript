@@ -73,6 +73,8 @@
 		};
 		eleDustbin.ondrop = function(ev) {
 		    /*拖拽元素进入目标元素头上，同时鼠标松开的时候*/
+		    var data = ev.dataTransfer.getData("text");
+		    //下面是用变量存数据正在拖拽的节点eleDrag
 		    if (eleDrag) {
 		        eleRemind.innerHTML = '<strong>"' + eleDrag.innerHTML + '"</strong>被扔进了垃圾箱';
 		        eleDrag.parentNode.removeChild(eleDrag);
