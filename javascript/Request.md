@@ -1,4 +1,4 @@
-##### 常见Content-Type
+# 常见Content-Type
 
 ### application/x-www-form-urlencoded
 * key1=val1&key2=val2 的方式进行编码
