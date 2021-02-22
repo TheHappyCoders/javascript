@@ -215,7 +215,7 @@ class A {
     y(){}
     z(){console.log('a')}
 }
-class B{
+class B extends A{
     constructor(a){if(a){this.m=a;}}
     m=2;
     z(){console.log('b')}
